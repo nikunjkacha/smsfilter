@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Author: Jelle Geerts
+
+Usage of the works is permitted provided that this instrument is
+retained with the works, so that any entity that uses the works is
+notified of this instrument.
+
+DISCLAIMER: THE WORKS ARE WITHOUT WARRANTY.
+-->
+
+<resources>
+
+    <item type="id" name="filters" />
+    <item type="id" name="messages" />
+    <item type="id" name="saveBlockedMessages" />
+
+</resources>

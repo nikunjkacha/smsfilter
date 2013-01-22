@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Author: Jelle Geerts
+
+Usage of the works is permitted provided that this instrument is
+retained with the works, so that any entity that uses the works is
+notified of this instrument.
+
+DISCLAIMER: THE WORKS ARE WITHOUT WARRANTY.
+-->
+
+<resources>
+
+    <string name="app_name">SMS Filter</string>
+
+    <string name="add">Toevoegen</string>
+    <string name="delete">Verwijderen</string>
+
+    <string name="messageFilters">Berichtfilters</string>
+    <string name="viewAndEditMessageFilters">Berichtfilters bekijken/bewerken</string>
+    <string name="messages">Berichten</string>
+    <string name="viewBlockedMessages">Geblokkeerde berichten bekijken</string>
+    <string name="saveMessages">Berichten opslaan</string>
+    <string name="saveMessagesAndShowNotifications">Berichten opslaan en meldingen in statusbalk weergeven</string>
+
+    <string name="noItemsSelected">Geen item(s) geselecteerd.</string>
+    <string name="filterWillBeDeleted">De filter wordt verwijderd.</string>
+    <string name="filtersWillBeDeleted">De filters worden verwijderd.</string>
+
+    <string name="newMessageFilter">Nieuwe berichtfilter</string>
+    <string name="editMessageFilter">Berichtfilter bewerken</string>
+    <string name="deleteMessageFilter">Berichtfilter verwijderen</string>
+    <string name="filterName">Filternaam</string>
+    <string name="fromAddress">Van (adres afzender)</string>
+    <string name="addContentFilter">Inhoudfilter toevoegen</string>
+    <string name="addAnotherContentFilter">Nog een inhoudfilter toevoegen</string>
+    <string name="clear">Wis</string>
+    <string name="blockMessageIfItContains">Blokkeer het bericht wanneer het al deze delen bevat (hoofdlettergevoelig):</string>
+    <string name="partOfTheMessage">Deel van het bericht</string>
+    <string name="thisFieldMayNotBeEmpty">Dit veld mag niet leeg zijn.</string>
+    <string name="filterNameAlreadyUsed">Er bestaat al een filter met deze naam.</string>
+
+    <string name="deleteAll">Alles verwijderen</string>
+    <string name="messageOptions">Berichtopties</string>
+    <string name="viewMessage">Bericht bekijken</string>
+    <string name="deleteMessage">Bericht verwijderen</string>
+    <string name="from">Van</string>
+    <string name="received">Ontvangen</string>
+    <string name="noMessagesToDelete">Er zijn geen berichten om te verwijderen.</string>
+    <string name="messageWillBeDeleted">Het bericht wordt verwijderd.</string>
+    <string name="allMessagesWillBeDeleted">Alle berichten worden verwijderd.</string>
+
+    <string name="smsFilterBlockedAMessage">SMS Filter blokkeerde een bericht</string>
+    <string name="clickToViewBlockedMessage">Selecteer dit om het geblokkeerde bericht te bekijken.</string>
+
+</resources>

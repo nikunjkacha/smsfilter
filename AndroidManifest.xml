@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Author: Jelle Geerts
+
+Usage of the works is permitted provided that this instrument is
+retained with the works, so that any entity that uses the works is
+notified of this instrument.
+
+DISCLAIMER: THE WORKS ARE WITHOUT WARRANTY.
+-->
+
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="bughunter2.smsfilter"
+    android:versionCode="1"
+    android:versionName="1.0"
+    android:installLocation="internalOnly" >
+
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <application
+        android:label="@string/app_name"
+        android:icon="@drawable/ic_launcher"
+        android:allowBackup="true" >
+
+        <receiver android:name="bughunter2.smsfilter.SMSReceiver">
+            <!-- "android:priority" may never be equal to or higher than SYSTEM_HIGH_PRIORITY (1000) -->
+            <intent-filter android:priority="999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".UI">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="bughunter2.smsfilter.FilterList" />
+        <activity
+            android:name="bughunter2.smsfilter.FilterForm"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity android:name="bughunter2.smsfilter.MessageList" />
+        <activity android:name="bughunter2.smsfilter.MessageViewer" />
+
+    </application>
+
+</manifest>
