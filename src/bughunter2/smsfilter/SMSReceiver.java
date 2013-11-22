@@ -67,10 +67,11 @@ public class SMSReceiver extends BroadcastReceiver
     private boolean shouldBlockMessage(Context context, String address, String fullMessageBody)
     {
         Settings settings = new Settings(context);
-        List<Filter> filters = settings.findFiltersByAddress(address);
+        List<Filter> filters = settings.findFiltersForAddress(address);
         for (Filter filter : filters)
         {
-            if (address.equals(filter.address))
+            if (address.equals(filter.address)
+                || filter.address.equals(Settings.ANY_ADDRESS))
             {
                 if (!contentFiltersMatch(filter.contentFilters, fullMessageBody))
                 {

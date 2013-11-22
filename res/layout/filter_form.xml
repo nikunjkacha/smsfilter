@@ -58,6 +58,12 @@ DISCLAIMER: THE WORKS ARE WITHOUT WARRANTY.
                 android:imeOptions="actionDone"
                 android:inputType="text" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/enterAnyToApplyToAll" />
+
             <Button
                 android:id="@+id/addContentFilter"
                 android:layout_width="wrap_content"

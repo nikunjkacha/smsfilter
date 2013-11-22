@@ -1,0 +1,10 @@
+Version 1.1 (November 22, 2013):
+=======================================================================
+
+* New feature: entering #ANY# as the filter address creates a filter
+  that applies to any address.
+
+Version 1.0 (January 22, 2013):
+=======================================================================
+
+* First release.

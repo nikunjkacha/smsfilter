@@ -32,10 +32,11 @@ DISCLAIMER: THE WORKS ARE WITHOUT WARRANTY.
     <string name="deleteMessageFilter">Berichtfilter verwijderen</string>
     <string name="filterName">Filternaam</string>
     <string name="fromAddress">Van (adres afzender)</string>
+    <string name="enterAnyToApplyToAll">Voer #ANY# in om de filter toe te passen voor elk adres.</string>
     <string name="addContentFilter">Inhoudfilter toevoegen</string>
     <string name="addAnotherContentFilter">Nog een inhoudfilter toevoegen</string>
     <string name="clear">Wis</string>
-    <string name="blockMessageIfItContains">Blokkeer het bericht wanneer het al deze delen bevat (hoofdlettergevoelig):</string>
+    <string name="blockMessageIfItContains">Blokkeer het bericht als het al deze delen bevat (hoofdlettergevoelig):</string>
     <string name="partOfTheMessage">Deel van het bericht</string>
     <string name="thisFieldMayNotBeEmpty">Dit veld mag niet leeg zijn.</string>
     <string name="filterNameAlreadyUsed">Er bestaat al een filter met deze naam.</string>

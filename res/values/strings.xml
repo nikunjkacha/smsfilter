@@ -32,10 +32,11 @@ DISCLAIMER: THE WORKS ARE WITHOUT WARRANTY.
     <string name="deleteMessageFilter">Delete message filter</string>
     <string name="filterName">Filter name</string>
     <string name="fromAddress">From (sender address)</string>
+    <string name="enterAnyToApplyToAll">Enter #ANY# to apply the filter to any address.</string>
     <string name="addContentFilter">Add a content filter</string>
     <string name="addAnotherContentFilter">Add another content filter</string>
     <string name="clear">Clear</string>
-    <string name="blockMessageIfItContains">Block message when it contains all of the following parts (case sensitive):</string>
+    <string name="blockMessageIfItContains">Block message if it contains all of the following parts (case sensitive):</string>
     <string name="partOfTheMessage">Part of the message</string>
     <string name="thisFieldMayNotBeEmpty">This field may not be empty.</string>
     <string name="filterNameAlreadyUsed">A filter with this name already exists.</string>

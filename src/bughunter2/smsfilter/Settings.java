@@ -29,6 +29,8 @@ public class Settings extends SQLiteOpenHelper
 
     public static final String ACTION_NEW_MESSAGE = C.PACKAGE_NAME + ".new_message";
 
+    public static final String ANY_ADDRESS = "#ANY#";
+
     private static final int DATABASE_VERSION = 1;
 
     private static final String SETTING_SAVE_MESSAGES   = "save_messages";
@@ -194,6 +196,8 @@ public class Settings extends SQLiteOpenHelper
         return filter;
     }
 
+    // Find filters that match the given address.
+    // The search will _not_ return filters that match _any_ address.
     public List<Filter> findFiltersByAddress(String address)
     {
         List<Filter> filters = new ArrayList<Filter>();
@@ -216,12 +220,27 @@ public class Settings extends SQLiteOpenHelper
         return filters;
     }
 
+    // Find filters that match the given address.
+    // The search will _also_ return filters that match _any_ address.
+    public List<Filter> findFiltersForAddress(String address)
+    {
+        List<Filter> list = findFiltersByAddress(address);
+        list.addAll(getWildcardFilters());
+        return list;
+    }
+
     public Filter getFilterByName(String name)
     {
         Filter filter = findFilterByName(name);
         if (filter == null)
             throw new AssertionError();
         return filter;
+    }
+
+    // Get filters that are meant to match _any_ address.
+    public List<Filter> getWildcardFilters()
+    {
+        return findFiltersByAddress(ANY_ADDRESS);
     }
 
     public List<Filter> getFilters()
