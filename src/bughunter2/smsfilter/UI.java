@@ -13,16 +13,22 @@ package bughunter2.smsfilter;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
+import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class UI extends ListActivity
 {
-    //private static final String TAG = "UI";
+    private static final String TAG = "UI";
 
     private int mSaveBlockedMessagesCheckableItemPosition = -1;
 
@@ -34,6 +40,9 @@ public class UI extends ListActivity
         setContentView(R.layout.main);
 
         Settings settings = new Settings(this);
+
+        if (android.os.Build.VERSION.SDK_INT > android.os.Build.VERSION_CODES.JELLY_BEAN_MR2)
+            showAppMayNotWorkWarning();
 
         List<View> views = new ArrayList<View>();
 
@@ -93,5 +102,36 @@ public class UI extends ListActivity
             boolean isChecked = checkedItemPositions.get(mSaveBlockedMessagesCheckableItemPosition);
             new Settings(this).setSaveMessages(isChecked);
         }
+    }
+    
+    /* The add-on doesn't work properly on Android version 4.4 (and possibly
+     * won't work on newer versions either).
+     * Since Android 4.4, calling abortBroadcast() in our SMSReceiver.java no
+     * longer has the desired effect (namely preventing the default SMS
+     * application from receiving an SMS message that we wanted to block).
+     * See the following links for more information:
+     *     https://code.google.com/p/android/issues/detail?id=61684
+     *     https://android-developers.blogspot.com/2013/10/getting-your-sms-apps-ready-for-kitkat.html
+     */
+    private void showAppMayNotWorkWarning()
+    {
+        SpannableString message = new SpannableString(getString(R.string.appMayNotWork));
+        Linkify.addLinks(message, Linkify.WEB_URLS);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder
+            .setIcon(android.R.drawable.ic_dialog_alert)
+            .setTitle(R.string.sorry)
+            .setMessage(message)
+            .setPositiveButton(android.R.string.ok, null);
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+        TextView messageView = (TextView) dialog.findViewById(android.R.id.message);
+        if (messageView == null)
+            Log.d(TAG, "Can't make link clickable. messageView == null");
+        else
+            messageView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 }

@@ -1,3 +1,11 @@
+Version 1.2 (August 25, 2014):
+=======================================================================
+
+* Show a warning when the application is run on Android 4.4 or newer,
+  as the application doesn't work on 4.4, and possibly doesn't work on
+  newer versions either.
+  See https://code.google.com/p/android/issues/detail?id=61684 .
+
 Version 1.1 (November 22, 2013):
 =======================================================================
 

@@ -13,6 +13,9 @@ DISCLAIMER: THE WORKS ARE WITHOUT WARRANTY.
 
     <string name="app_name">SMS Filter</string>
 
+    <string name="sorry">Sorry</string>
+    <string name="appMayNotWork">SMS Filter probably doesn\'t work on your version of Android. Please complain to Google at https://code.google.com/p/android/issues/detail?id=61684</string>
+
     <string name="add">Add</string>
     <string name="delete">Delete</string>
 
