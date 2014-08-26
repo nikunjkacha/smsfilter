@@ -41,7 +41,7 @@ public class UI extends ListActivity
 
         Settings settings = new Settings(this);
 
-        if (android.os.Build.VERSION.SDK_INT > android.os.Build.VERSION_CODES.JELLY_BEAN_MR2)
+        if (android.os.Build.VERSION.SDK_INT > 18) // android.os.Build.VERSION_CODES.JELLY_BEAN_MR2
             showAppMayNotWorkWarning();
 
         List<View> views = new ArrayList<View>();
